@@ -6,7 +6,6 @@ public class PlayerMovement : MonoBehaviour
 {
     public float speed = 5f;
     private Rigidbody rb;
-
     public float halfPlayerWidth;
     Vector2 screenSize;
 
