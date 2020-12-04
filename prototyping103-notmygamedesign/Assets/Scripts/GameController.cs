@@ -22,7 +22,7 @@ public class GameController : MonoBehaviour
     public int score;
 
     private void Start()
-    {
+    { // Set score to '0', hide Game Over and Restart texts
         gameOver = false;
         restart = false;
         restartText.text = "";
@@ -32,16 +32,19 @@ public class GameController : MonoBehaviour
        StartCoroutine (SpawnWaves());
     }
 
-    private void Update()
+    private void LateUpdate()
     {
         if (restart == true)
-        {
+        { // Restart game with 'R' and run game again
             if (Input.GetKeyDown(KeyCode.R))
             {
                 SceneManager.LoadScene("SampleScene");
+                Time.timeScale = 1;
             }
         }
     }
+
+    // Obstacles spawn in waves
     IEnumerator SpawnWaves()
     {
         yield return new WaitForSeconds(startWait);
@@ -56,29 +59,29 @@ public class GameController : MonoBehaviour
             }
             yield return new WaitForSeconds(waveWait);
 
-            if (gameOver == true)
-            {
-                restart = true;
-                restartText.text = "Press 'R' for restart";
-                break;
-            }
+            
         }
     }
 
+    // Add score
     public void AddScore (int newScoreValue)
     {
         score += newScoreValue;
         UpdateScore();
     }
 
+    // Update score text
     void UpdateScore()
     {
         scoreText.text = "Score: " + score;
     }
 
+    // Toggle Game Over and Restart screen 
     public void GameOver()
     {
         gameOver = true;
         gameOverText.text = "Game Over!";
+        restart = true;
+        restartText.text = "Press 'R' for restart";
     }
 }

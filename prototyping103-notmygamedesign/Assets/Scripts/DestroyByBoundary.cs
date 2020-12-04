@@ -7,6 +7,7 @@ public class DestroyByBoundary : MonoBehaviour
     public int scoreValue;
     private GameController gameController;
 
+    // get access to GameController script
     private void Start()
     {
         GameObject gameControllerObject = GameObject.FindWithTag("GameController");
@@ -20,6 +21,7 @@ public class DestroyByBoundary : MonoBehaviour
         }
     }
 
+    //Destroy on boundary exit and add points
     private void OnTriggerExit(Collider other)
     {
         Destroy(other.gameObject);

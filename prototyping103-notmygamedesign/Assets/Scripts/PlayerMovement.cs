@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // Set screen boundaries
         halfPlayerWidth = transform.localScale.x / -2;
         screenSize = new Vector2(Camera.main.aspect * Camera.main.orthographicSize + halfPlayerWidth, Camera.main.orthographicSize);
 

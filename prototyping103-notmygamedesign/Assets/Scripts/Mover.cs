@@ -13,7 +13,7 @@ public class Mover : MonoBehaviour
         GetComponent<Rigidbody>();
     }
 
-    // Update is called once per frame
+    // Move obstacles automatically
     void FixedUpdate()
     {
         transform.Translate(Vector3.down * Time.deltaTime * speed);

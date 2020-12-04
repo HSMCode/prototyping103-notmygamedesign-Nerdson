@@ -127,8 +127,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerExplosion: {fileID: 100000, guid: 118e3f56a5212e849882f9a2fccadda7, type: 3}
-  explosion: {fileID: 7917180209777396526, guid: 96f02b0f80be7c243ab2aa781fd2e0f8,
-    type: 3}
   gameController: {fileID: 7015568786068917031, guid: 5296bfd469375704cacbe2c0440b00c7,
     type: 3}
 --- !u!114 &4266584613433127890
@@ -143,7 +141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c93bead108472642959d2703e1d23fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
+  speed: 10
 --- !u!82 &-8431998580601748334
 AudioSource:
   m_ObjectHideFlags: 0
